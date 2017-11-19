@@ -9,7 +9,6 @@
   src: url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.woff") format("woff"), url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.svg#Helvetica Neue") format("svg"); }
 
 body, html {
-  font-family: 'Helvetica Neue LT Pro';
   height: 100%; }
 
 /* About-page animation */
