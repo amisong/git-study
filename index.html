@@ -1,10 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100%;">
 <head>
 	<title></title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="common.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
-<body>
-	<div class="spinner"></div>
+<body style="height: 100%;">
+	<div id="index-wrap">
+		<header class="header-wrap">
+			<div class="header-container">
+				<div class="main-logo">
+					<a href="index.html">Ami.Song</a>
+				</div>
+				<nav>
+					<ul>
+						<li>
+							<a href="#" id="btn-works">
+								Works
+							</a>
+						</li>
+						<li>
+							<a href="#" id="btn-about">
+								About	
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="about-wrap">
+				<div class="about-container">
+					<div class="about-title">Ami Song
+						<span>Amisong's about</span>
+					</div>
+					<div class="about-close">Close the About Page.</div>
+					<div class="about-content">
+						<div class="introduction">
+							<h1>
+								Currently working at Union Pool
+								as a creative Ui designer
+								where I focus on interactive experiences & smooth animations.
+							</h1>
+							<p>
+								Over the past few years I’ve had the opportunity to collaborate with start-ups, agencies and brands.
+								<br/>
+								My current stack exists of React, Redux, Scss and I’ve recently started testing headless CMSs such as Contentful and Prismic.
+							</p>	
+						</div>
+						<div class="specialty">
+							<h2>Specialties</h2>
+							<p>
+								APP ・ WEB UI/UX<br/>
+								Branding<br/>
+								Illustration<br/>
+							</p>
+						</div>
+						<div class="speciality-detail">
+							<div>
+								<h3>
+									Proficient
+								</h3>
+								<p> 
+									Sketch<br/>
+									Zeplin<br/>
+									Protopie<br/>
+									Photoshop<br/>
+									Illustrator<br/>
+									HTML<br/>
+									SCSS<br/>
+									Jquary<br/>
+									Lalavel/Blade<br/>
+									Git/Source Tree<br/>
+									Jira<br/>
+									Taiga
+								</p>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="intro-wrap">
+			<div class="intro-text-container">
+				<p>
+					Hello! I’m a UI designer living and working in Seoul. Focusing on UX, UI, brand & illustration.
+				</p>
+				<div class="contact">
+					<div>
+						<a href="https://www.instagram.com/ami.song/" target="_blank">Instagram</a>
+					</div>
+					<div>
+						<a href="https://www.facebook.com/songami91" target="_blank">Facebook</a>
+					</div>
+					<div class="mail">
+						<a href="mailto:amisong.work@gmail.com" target="_blank">amisong.work@gmail.com</a>
+					</div>
+				</div>
+			</div>
+			<div class="intro-img-container">
+				<img src="img/img-intro.jpg" alt="Using a cellphone">
+			</div>
+		</div>
+	</div>
+
+
 </body>
+<script>
+ 	$(document).on('click','#btn-works, #btn-about',function(e){
+        alert( "Sorry, not ready yet :(" );       
+    });
+
+    // $(document).on('click','#btn-about',function(e){
+    //     $('.about-wrap').addClass('is-open');
+    // });
+
+    $(document).on('click','.about-close',function(e){
+        $('.about-wrap').removeClass('is-open');
+    });
+</script>
+
 </html>

@@ -1,32 +1,285 @@
-body{
+@font-face {
+  font-family: "Helvetica Neue LT Pro";
+  src: url("//db.onlinewebfonts.com/t/9b65594038a8611d42471aca24b95dbf.eot");
+  src: url("//db.onlinewebfonts.com/t/9b65594038a8611d42471aca24b95dbf.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9b65594038a8611d42471aca24b95dbf.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9b65594038a8611d42471aca24b95dbf.woff") format("woff"), url("//db.onlinewebfonts.com/t/9b65594038a8611d42471aca24b95dbf.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9b65594038a8611d42471aca24b95dbf.svg#Helvetica Neue LT Pro") format("svg"); }
+
+@font-face {
+  font-family: "Helvetica Neue Light";
+  src: url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.eot");
+  src: url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.woff") format("woff"), url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.svg#Helvetica Neue") format("svg"); }
+
+body, html {
+  font-family: 'Helvetica Neue LT Pro';
+  height: 100%; }
+
+/* About-page animation */
+@keyframes AboutAnimation {
+  from {
+    width: 0; }
+  to {
+    width: 200px; } }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button, input {
+  border: none; }
+
+a {
+  text-decoration: none; }
+
+#index-wrap {
+  padding: 0 60px;
+  width: 100%;
+  height: 100%;
+  max-width: 1430px;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+  @media (max-width: 768px) {
+    #index-wrap {
+      padding: 0 30px; } }
+
+header.header-wrap {
+  position: relative;
+  width: 100%; }
+  header.header-wrap .header-container {
+    height: 132px;
+    line-height: 132px; }
+    @media (max-width: 768px) {
+      header.header-wrap .header-container {
+        height: 76px;
+        line-height: 76px; } }
+    header.header-wrap .header-container a {
+      color: #000;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -1px; }
+      @media (max-width: 768px) {
+        header.header-wrap .header-container a {
+          font-size: 18px;
+          letter-spacing: -0.5px; } }
+    header.header-wrap .header-container .main-logo {
+      display: inline-block; }
+    header.header-wrap .header-container nav {
+      float: right; }
+      header.header-wrap .header-container nav li {
+        display: inline-block; }
+        header.header-wrap .header-container nav li:first-child {
+          padding-right: 40px;
+          margin-right: 21px;
+          position: relative; }
+          @media (max-width: 768px) {
+            header.header-wrap .header-container nav li:first-child {
+              padding-right: 18px;
+              margin-right: 6px; } }
+          header.header-wrap .header-container nav li:first-child:after {
+            content: '/';
+            color: #000;
+            font-size: 32px;
+            font-weight: 100;
+            padding-left: 20px;
+            position: absolute;
+            top: -3px;
+            right: 0;
+            font-family: 'Helvetica Neue Light'; }
+            @media (max-width: 768px) {
+              header.header-wrap .header-container nav li:first-child:after {
+                font-size: 18px;
+                padding-left: 11px;
+                top: -4px; } }
+        header.header-wrap .header-container nav li a {
+          transition: all .2s;
+          -webkit-transition: all .2s;
+          border-bottom: 2px solid transparent; }
+          header.header-wrap .header-container nav li a:hover {
+            border-bottom: 2px solid black; }
+  header.header-wrap .about-wrap {
+    display: none;
+    background: #000;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-}
+    overflow-y: scroll;
+    color: #fff; }
+    header.header-wrap .about-wrap .about-container {
+      width: 100%;
+      max-width: 1190px;
+      margin: 0 auto;
+      position: relative;
+      padding-top: 150px; }
+      header.header-wrap .about-wrap .about-container div {
+        display: inline-block; }
+      header.header-wrap .about-wrap .about-container .about-title {
+        width: 50%;
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        float: left; }
+        header.header-wrap .about-wrap .about-container .about-title span {
+          font-size: 0;
+          width: 200px;
+          height: 1px;
+          background: rgba(255, 255, 255, 0.5);
+          display: inline-block;
+          margin-left: 20px;
+          vertical-align: middle;
+          animation: AboutAnimation;
+          animation-duration: 0.8s;
+          animation-timing-function: ease-out; }
+      header.header-wrap .about-wrap .about-container .about-close {
+        width: 30px;
+        height: 30px;
+        font-size: 0;
+        background: url("img/btn-close.png") no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        cursor: pointer; }
+      header.header-wrap .about-wrap .about-container .about-content {
+        width: 50%;
+        float: left;
+        letter-spacing: 1px; }
+        header.header-wrap .about-wrap .about-container .about-content .introduction {
+          padding-bottom: 120px; }
+          header.header-wrap .about-wrap .about-container .about-content .introduction h1 {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.2;
+            padding-bottom: 40px; }
+          header.header-wrap .about-wrap .about-container .about-content .introduction p {
+            font-size: 22px;
+            line-height: 1.4;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300; }
+        header.header-wrap .about-wrap .about-container .about-content .specialty h2 {
+          font-size: 28px;
+          font-weight: 600;
+          padding-bottom: 20px; }
+        header.header-wrap .about-wrap .about-container .about-content .specialty p {
+          font-size: 20px;
+          line-height: 1.4;
+          color: rgba(255, 255, 255, 0.6);
+          font-weight: 300; }
+    header.header-wrap .about-wrap.is-open {
+      display: block; }
 
-.spinner{
-    width: 80px;
-    height: 80px;
-    
-    border: 2px solid #f3f3f3;
-    border-top:4px solid #4D4DDC;
-    border-radius: 100%;
-    
+.intro-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 50px 60px;
+  max-width: 1430px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+  @media (max-width: 768px) {
+    .intro-wrap {
+      padding: 40px 30px;
+      width: auto; } }
+  .intro-wrap .intro-text-container {
+    font-weight: 800;
+    z-index: 0; }
+    .intro-wrap .intro-text-container p {
+      width: 100%;
+      max-width: 900px;
+      color: #000;
+      font-size: 65px;
+      letter-spacing: -1px; }
+      @media (max-width: 768px) {
+        .intro-wrap .intro-text-container p {
+          font-size: 36px;
+          letter-spacing: -1.6px; } }
+    .intro-wrap .intro-text-container .contact {
+      padding-top: 60px; }
+      @media (max-width: 768px) {
+        .intro-wrap .intro-text-container .contact {
+          padding-top: 20px; } }
+      .intro-wrap .intro-text-container .contact a {
+        color: #000;
+        font-size: 20px;
+        transition: all .2s;
+        -webkit-transition: all .2s;
+        border-bottom: 2px solid transparent;
+        letter-spacing: -0.2px;
+        font-weight: 800; }
+        @media (max-width: 768px) {
+          .intro-wrap .intro-text-container .contact a {
+            font-size: 14px;
+            font-weight: 600; } }
+        .intro-wrap .intro-text-container .contact a:hover {
+          border-bottom: 2px solid black; }
+      .intro-wrap .intro-text-container .contact div {
+        display: inline-block; }
+        .intro-wrap .intro-text-container .contact div:first-child {
+          margin-right: 4px; }
+          @media (max-width: 768px) {
+            .intro-wrap .intro-text-container .contact div:first-child {
+              margin-right: 0; } }
+          .intro-wrap .intro-text-container .contact div:first-child:after {
+            content: '/';
+            color: #000;
+            font-size: 20px;
+            font-weight: 100;
+            padding-left: 6px;
+            font-family: 'Helvetica Neue Light'; }
+            @media (max-width: 768px) {
+              .intro-wrap .intro-text-container .contact div:first-child:after {
+                font-size: 14px;
+                padding-left: 1px; } }
+        .intro-wrap .intro-text-container .contact div.mail {
+          padding-top: 8px;
+          display: block; }
+          @media (max-width: 768px) {
+            .intro-wrap .intro-text-container .contact div.mail {
+              padding-top: 4px; } }
+  .intro-wrap .intro-img-container {
     position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right: 0;
-    margin: auto;
-    
-    animation: spin 1s infinite linear;
-}
-
-@keyframes spin {
-    from{
-        transform: rotate(0deg);
-    }to{
-        transform: rotate(360deg);
-    }
-}
-
+    bottom: 50px;
+    right: 120px;
+    z-index: -1; }
+    .intro-wrap .intro-img-container img {
+      width: 100%;
+      max-width: 304px; }
+      @media (max-width: 768px) {
+        .intro-wrap .intro-img-container img {
+          display: none; } }
