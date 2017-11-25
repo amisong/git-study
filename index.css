@@ -1,18 +1,27 @@
 @font-face {
-  font-family: HelveticaHeavy;
-  src: url(font/HelveticaHeavy.eot?#iefix) format("embedded-opentype"), url(font/HelveticaHeavy.woff) format("woff"), url(font/HelveticaHeavy.ttf) format("truetype"); }
-
-body, html {
-  height: 90%;
-  font-family: "HelveticaHeavy" "serif"; }
+  font-family: Helvetica;
+  src: url(font/HelveticaHeavy.eot?#iefix) format("embedded-opentype"), url(font/HelveticaHeavy.woff) format("woff"), url(font/HelveticaHeavy.ttf) format("truetype");
+  font-weight: 900; }
 
 @font-face {
-  font-family: HelveticaHeavy;
-  src: url(font/HelveticaHeavy.eot?#iefix) format("embedded-opentype"), url(font/HelveticaHeavy.woff) format("woff"), url(font/HelveticaHeavy.ttf) format("truetype"); }
+  font-family: Helvetica;
+  src: url(font/HelveticaMedium.eot?#iefix) format("embedded-opentype"), url(font/HelveticaMedium.woff) format("woff"), url(font/HelveticaMedium.ttf) format("truetype");
+  font-weight: 600; }
+
+@font-face {
+  font-family: Helvetica;
+  src: url(font/HelveticaRegular.eot?#iefix) format("embedded-opentype"), url(font/HelveticaRegular.woff) format("woff"), url(font/HelveticaRegular.ttf) format("truetype");
+  font-weight: 300; }
+
+@font-face {
+  font-family: Helvetica;
+  src: url(font/HelveticaThin.eot?#iefix) format("embedded-opentype"), url(font/HelveticaThin.woff) format("woff"), url(font/HelveticaThin.ttf) format("truetype");
+  font-weight: 100; }
 
 body, html {
   height: 100%;
-  font-family: "HelveticaHeavy" "serif"; }
+  font-family: Helvetica, sans serif;
+  font-weight: 900; }
 
 /* About-page animation */
 @keyframes AboutAnimation {
@@ -90,7 +99,7 @@ header.header-wrap {
     header.header-wrap .header-container a {
       color: #000;
       font-size: 32px;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: -1px; }
       @media (max-width: 768px) {
         header.header-wrap .header-container a {
@@ -117,14 +126,14 @@ header.header-wrap {
             font-weight: 100;
             padding-left: 20px;
             position: absolute;
-            top: -3px;
+            top: -1px;
             right: 0;
-            font-family: 'Helvetica Neue Light'; }
+            font-weight: 100; }
             @media (max-width: 768px) {
               header.header-wrap .header-container nav li:first-child:after {
                 font-size: 18px;
                 padding-left: 11px;
-                top: -4px; } }
+                top: 0px; } }
         header.header-wrap .header-container nav li a {
           transition: all .2s;
           -webkit-transition: all .2s;
@@ -147,15 +156,27 @@ header.header-wrap {
       max-width: 1190px;
       margin: 0 auto;
       position: relative;
-      padding-top: 150px; }
+      padding: 150px 30px 100px;
+      box-sizing: border-box; }
+      header.header-wrap .about-wrap .about-container:before, header.header-wrap .about-wrap .about-container:after {
+        content: "";
+        display: table; }
+      header.header-wrap .about-wrap .about-container:after {
+        clear: both; }
       header.header-wrap .about-wrap .about-container div {
         display: inline-block; }
+      @media (max-width: 768px) {
+        header.header-wrap .about-wrap .about-container {
+          padding: 30px 20px 20px; } }
       header.header-wrap .about-wrap .about-container .about-title {
         width: 50%;
         font-size: 22px;
         font-weight: 600;
         letter-spacing: 0.5px;
         float: left; }
+        @media (max-width: 768px) {
+          header.header-wrap .about-wrap .about-container .about-title {
+            width: 100%; } }
         header.header-wrap .about-wrap .about-container .about-title span {
           font-size: 0;
           width: 200px;
@@ -167,6 +188,9 @@ header.header-wrap {
           animation: AboutAnimation;
           animation-duration: 0.8s;
           animation-timing-function: ease-out; }
+          @media (max-width: 768px) {
+            header.header-wrap .about-wrap .about-container .about-title span {
+              display: none; } }
       header.header-wrap .about-wrap .about-container .about-close {
         width: 30px;
         height: 30px;
@@ -174,34 +198,142 @@ header.header-wrap {
         background: url("img/btn-close.png") no-repeat;
         background-size: cover;
         position: absolute;
-        top: 70px;
-        right: 0;
+        top: 60px;
+        right: 30px;
         cursor: pointer; }
+        @media (max-width: 768px) {
+          header.header-wrap .about-wrap .about-container .about-close {
+            width: 24px;
+            height: 24px;
+            top: 20px; } }
       header.header-wrap .about-wrap .about-container .about-content {
-        width: 50%;
+        width: 45%;
         float: left;
         letter-spacing: 1px; }
+        @media (max-width: 768px) {
+          header.header-wrap .about-wrap .about-container .about-content {
+            width: 100%; } }
         header.header-wrap .about-wrap .about-container .about-content .introduction {
           padding-bottom: 120px; }
+          @media (max-width: 768px) {
+            header.header-wrap .about-wrap .about-container .about-content .introduction {
+              padding-bottom: 80px; } }
           header.header-wrap .about-wrap .about-container .about-content .introduction h1 {
             font-size: 32px;
             font-weight: 600;
             line-height: 1.2;
-            padding-bottom: 40px; }
+            padding: 0 0 40px; }
+            @media (max-width: 768px) {
+              header.header-wrap .about-wrap .about-container .about-content .introduction h1 {
+                font-size: 24px;
+                padding: 100px 0 18px; } }
           header.header-wrap .about-wrap .about-container .about-content .introduction p {
             font-size: 22px;
             line-height: 1.4;
-            color: rgba(255, 255, 255, 0.7);
-            font-weight: 300; }
-        header.header-wrap .about-wrap .about-container .about-content .specialty h2 {
-          font-size: 28px;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 1.2px;
+            font-weight: 100; }
+            @media (max-width: 768px) {
+              header.header-wrap .about-wrap .about-container .about-content .introduction p {
+                font-size: 14px; } }
+        header.header-wrap .about-wrap .about-container .about-content .specialty {
+          display: block;
+          padding-bottom: 30px;
+          position: relative; }
+          @media (max-width: 768px) {
+            header.header-wrap .about-wrap .about-container .about-content .specialty {
+              padding-bottom: 10px; } }
+          header.header-wrap .about-wrap .about-container .about-content .specialty:before {
+            content: '';
+            position: absolute;
+            left: -540px;
+            top: 0;
+            background: url("img/img-about.png");
+            background-size: cover;
+            width: 387px;
+            height: 255px; }
+          header.header-wrap .about-wrap .about-container .about-content .specialty h2 {
+            font-size: 28px;
+            font-weight: 600;
+            padding-bottom: 20px; }
+            @media (max-width: 768px) {
+              header.header-wrap .about-wrap .about-container .about-content .specialty h2 {
+                font-size: 24px; } }
+          header.header-wrap .about-wrap .about-container .about-content .specialty p {
+            font-size: 20px;
+            line-height: 1.4;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 1.2px;
+            font-weight: 100; }
+            @media (max-width: 768px) {
+              header.header-wrap .about-wrap .about-container .about-content .specialty p {
+                font-size: 18px; } }
+        header.header-wrap .about-wrap .about-container .about-content .speciality-detail .spec {
+          vertical-align: top;
+          padding-top: 30px;
+          color: rgba(255, 255, 255, 0.8); }
+          header.header-wrap .about-wrap .about-container .about-content .speciality-detail .spec:first-child {
+            padding-right: 120px; }
+        header.header-wrap .about-wrap .about-container .about-content .speciality-detail h3 {
+          font-size: 20px;
           font-weight: 600;
           padding-bottom: 20px; }
-        header.header-wrap .about-wrap .about-container .about-content .specialty p {
-          font-size: 20px;
-          line-height: 1.4;
-          color: rgba(255, 255, 255, 0.6);
-          font-weight: 300; }
+          @media (max-width: 768px) {
+            header.header-wrap .about-wrap .about-container .about-content .speciality-detail h3 {
+              font-size: 16px; } }
+        header.header-wrap .about-wrap .about-container .about-content .speciality-detail p {
+          font-size: 16px;
+          line-height: 1.8;
+          color: rgba(255, 255, 255, 0.5);
+          letter-spacing: 1.2px;
+          font-weight: 100; }
+          @media (max-width: 768px) {
+            header.header-wrap .about-wrap .about-container .about-content .speciality-detail p {
+              font-size: 14px;
+              line-height: 1.6; } }
+        header.header-wrap .about-wrap .about-container .about-content .contact {
+          padding-top: 60px; }
+          @media (max-width: 768px) {
+            header.header-wrap .about-wrap .about-container .about-content .contact {
+              padding-top: 50px; } }
+          header.header-wrap .about-wrap .about-container .about-content .contact a {
+            color: #fff;
+            font-size: 20px;
+            transition: all .2s;
+            -webkit-transition: all .2s;
+            border-bottom: 2px solid transparent;
+            letter-spacing: 0.6px;
+            font-weight: 600; }
+            @media (max-width: 768px) {
+              header.header-wrap .about-wrap .about-container .about-content .contact a {
+                font-size: 14px;
+                font-weight: 600; } }
+            header.header-wrap .about-wrap .about-container .about-content .contact a:hover {
+              border-bottom: 2px solid #fff; }
+          header.header-wrap .about-wrap .about-container .about-content .contact div {
+            display: inline-block; }
+            header.header-wrap .about-wrap .about-container .about-content .contact div:first-child {
+              margin-right: 4px; }
+              @media (max-width: 768px) {
+                header.header-wrap .about-wrap .about-container .about-content .contact div:first-child {
+                  margin-right: 0; } }
+              header.header-wrap .about-wrap .about-container .about-content .contact div:first-child:after {
+                content: '/';
+                color: #fff;
+                font-size: 20px;
+                font-weight: 100;
+                padding-left: 6px;
+                font-weight: 100; }
+                @media (max-width: 768px) {
+                  header.header-wrap .about-wrap .about-container .about-content .contact div:first-child:after {
+                    font-size: 14px;
+                    padding-left: 1px; } }
+            header.header-wrap .about-wrap .about-container .about-content .contact div.mail {
+              padding-top: 8px;
+              display: block; }
+              @media (max-width: 768px) {
+                header.header-wrap .about-wrap .about-container .about-content .contact div.mail {
+                  padding-top: 4px; } }
     header.header-wrap .about-wrap.is-open {
       display: block; }
 
@@ -243,11 +375,11 @@ header.header-wrap {
         -webkit-transition: all .2s;
         border-bottom: 2px solid transparent;
         letter-spacing: -0.2px;
-        font-weight: 800; }
+        /*font-weight: 900;*/ }
         @media (max-width: 768px) {
           .intro-wrap .intro-text-container .contact a {
             font-size: 14px;
-            font-weight: 600; } }
+            font-weight: 900; } }
         .intro-wrap .intro-text-container .contact a:hover {
           border-bottom: 2px solid black; }
       .intro-wrap .intro-text-container .contact div {
@@ -263,7 +395,7 @@ header.header-wrap {
             font-size: 20px;
             font-weight: 100;
             padding-left: 6px;
-            font-family: 'Helvetica Neue Light'; }
+            font-weight: 100; }
             @media (max-width: 768px) {
               .intro-wrap .intro-text-container .contact div:first-child:after {
                 font-size: 14px;

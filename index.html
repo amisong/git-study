@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%;">
+<html>
 <head>
 	<title></title>
 	<meta charset="utf-8">
@@ -9,7 +9,7 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
-<body style="height: 100%;">
+<body>
 	<div id="index-wrap">
 		<header class="header-wrap">
 			<div class="header-container">
@@ -31,7 +31,7 @@
 					</ul>
 				</nav>
 			</div>
-			<div class="about-wrap">
+			<div class="about-wrap is-open">
 				<div class="about-container">
 					<div class="about-title">Ami Song
 						<span>Amisong's about</span>
@@ -46,7 +46,6 @@
 							</h1>
 							<p>
 								Over the past few years I’ve had the opportunity to collaborate with start-ups, agencies and brands.
-								<br/>
 								My current stack exists of React, Redux, Scss and I’ve recently started testing headless CMSs such as Contentful and Prismic.
 							</p>	
 						</div>
@@ -59,9 +58,9 @@
 							</p>
 						</div>
 						<div class="speciality-detail">
-							<div>
+							<div class="spec">
 								<h3>
-									Proficient
+									Proficient in
 								</h3>
 								<p> 
 									Sketch<br/>
@@ -77,6 +76,30 @@
 									Jira<br/>
 									Taiga
 								</p>
+							</div>
+							<div class="spec">
+								<h3>
+									Familiar with
+								</h3>
+								<p> 
+									Wireframing<br/>
+									Prototyping<br/>
+									Scrum/Sprint/Kanban<br/>
+									Google Analytics<br/>
+									A/B Test<br/>
+									Quality Assurance
+								</p>
+							</div>
+						</div>
+						<div class="contact">
+							<div>
+								<a href="https://www.instagram.com/ami.song/" target="_blank">Instagram</a>
+							</div>
+							<div>
+								<a href="https://www.facebook.com/songami91" target="_blank">Facebook</a>
+							</div>
+							<div class="mail">
+								<a href="mailto:amisong.work@gmail.com" target="_blank">amisong.work@gmail.com</a>
 							</div>
 						</div>	
 					</div>
@@ -110,13 +133,13 @@
 
 </body>
 <script>
- 	$(document).on('click','#btn-works, #btn-about',function(e){
+ 	$(document).on('click','#btn-works',function(e){
         alert( "Sorry, not ready yet :(" );       
     });
 
-    // $(document).on('click','#btn-about',function(e){
-    //     $('.about-wrap').addClass('is-open');
-    // });
+    $(document).on('click','#btn-about',function(e){
+        $('.about-wrap').addClass('is-open');
+    });
 
     $(document).on('click','.about-close',function(e){
         $('.about-wrap').removeClass('is-open');
