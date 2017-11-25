@@ -1,15 +1,18 @@
 @font-face {
-  font-family: "Helvetica Neue LT Pro";
-  src: url("//db.onlinewebfonts.com/t/9b65594038a8611d42471aca24b95dbf.eot");
-  src: url("//db.onlinewebfonts.com/t/9b65594038a8611d42471aca24b95dbf.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9b65594038a8611d42471aca24b95dbf.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9b65594038a8611d42471aca24b95dbf.woff") format("woff"), url("//db.onlinewebfonts.com/t/9b65594038a8611d42471aca24b95dbf.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9b65594038a8611d42471aca24b95dbf.svg#Helvetica Neue LT Pro") format("svg"); }
-
-@font-face {
-  font-family: "Helvetica Neue Light";
-  src: url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.eot");
-  src: url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.woff") format("woff"), url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/35321a782a3cbb7f9cc0353450a7145e.svg#Helvetica Neue") format("svg"); }
+  font-family: HelveticaHeavy;
+  src: url(font/HelveticaHeavy.eot?#iefix) format("embedded-opentype"), url(font/HelveticaHeavy.woff) format("woff"), url(font/HelveticaHeavy.ttf) format("truetype"); }
 
 body, html {
-  height: 100%; }
+  height: 90%;
+  font-family: "HelveticaHeavy" "serif"; }
+
+@font-face {
+  font-family: HelveticaHeavy;
+  src: url(font/HelveticaHeavy.eot?#iefix) format("embedded-opentype"), url(font/HelveticaHeavy.woff) format("woff"), url(font/HelveticaHeavy.ttf) format("truetype"); }
+
+body, html {
+  height: 100%;
+  font-family: "HelveticaHeavy" "serif"; }
 
 /* About-page animation */
 @keyframes AboutAnimation {
